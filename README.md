@@ -19,12 +19,12 @@ In group activity recognition, the temporal dynamics of the whole activity can b
 
 We collected a new dataset using publicly available **YouTube volleyball** videos. We annotated **4830 frames** that were handpicked from **55 videos** with 9 player action labels and 8 team activity labels. 
 
-<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/dataset1.png" alt="Figure 1" height="400" >
+<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/dataset1.jpg" alt="Figure 3" height="400" >
 
 **Figure 3**: A frame labeled as Left Spike and bounding boxes around each team players is annotated in the dataset.
 
 
-<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/dataset2.png" alt="Figure 1" height="400" >
+<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/dataset2.jpg" alt="Figure 4" height="400" >
 
 **Figure 4**: For each visible player, an action label is annotaed.
 
