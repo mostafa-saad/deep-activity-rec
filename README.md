@@ -1,6 +1,4 @@
-## [Paper Link](http://www.cs.sfu.ca/~mori/research/papers/ibrahim-cvpr16.pdf)
-* A Hierarchical Deep Temporal Model for **Group Activity Recognition**
-* **Authors**: Mostafa S. Ibrahim, Srikanth Muralidharan, Zhiwei Deng, Arash Vahdat, Greg Mori
+## [A Hierarchical Deep Temporal Model for Group Activity Recognition. Mostafa S. Ibrahim, Srikanth Muralidharan, Zhiwei Deng, Arash Vahdat, Greg Mori.  IEEE Computer Vision and Pattern Recognition 2016](http://www.cs.sfu.ca/~mori/research/papers/ibrahim-cvpr16.pdf)
 
 ## Abstract
 In group activity recognition, the temporal dynamics of the whole activity can be inferred based on the dynamics of the individual people representing the activity. We build a deep model to capture these dynamics based on LSTM models. To make use of these observations, we present a **2-stage deep temporal model for the group activity recognition** problem.  In our model, a LSTM model is designed to represent **action dynamics of individual people** in a sequence and another LSTM model is designed to **aggregate person-level information** for whole activity understanding.  We evaluate our model over two datasets: the Collective Activity Dataset and a new volleyball dataset.
@@ -78,14 +76,36 @@ TODO
 
 Source code is released under the **BSD 2-Clause license**
 
-Please cite model in your publications if it helps your research:
+Please cite our model in your publications if it helps your research:
 
     @inproceedings{msibrahi16deepactivity,
-      author    = {Ibrahim M. S. and M. Srikanth and Deng Z. and A. Vahdat and G. Mori,},
+      author    = {Mostafa S. Ibrahim and Srikanth Muralidharan and Zhiwei Deng and Arash Vahdat and Greg Mori},
       title     = {A Hierarchical Deep Temporal Model for Group Activity Recognition.},
       booktitle = {Computer Vision and Pattern Recognition (CVPR)},
       year      = {2016}
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!---
