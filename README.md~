@@ -6,11 +6,11 @@
 In group activity recognition, the temporal dynamics of the whole activity can be inferred based on the dynamics of the individual people representing the activity. We build a deep model to capture these dynamics based on LSTM models. To make use of these observations, we present a **2-stage deep temporal model for the group activity recognition** problem.  In our model, a LSTM model is designed to represent **action dynamics of individual people** in a sequence and another LSTM model is designed to **aggregate person-level information** for whole activity understanding.  We evaluate our model over two datasets: the Collective Activity Dataset and a new volleyball dataset.
 
 ## Model
-<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/fig1.png" alt="Figure 1" height="400" >
+<img src="https://github.com/mostafa-saad/test-ignire/blob/master/img/fig1.png" alt="Figure 1" height="400" >
 
 **Figure 1**: High level figure for group activity recognition via a hierarchical model. Each person in a scene is modeled using a temporal model that captures his/her dynamics, these models are integrated into a higher-level model that captures scene-level activity.
 
-<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/fig2.png" alt="Figure 1" height="400" >
+<img src="https://github.com/mostafa-saad/test-ignire/blob/master/img/fig2.png" alt="Figure 1" height="400" >
 
 **Figure 2**: Detailed figure for the model. Given tracklets of K-players, we feed each tracklet in a CNN, followed by a person LSTM layer to represent each player's action. We then pool over all people's temporal features in the scene. The output of the pooling layer is feed to the second LSTM network to identify the whole teams activity.
 
@@ -19,12 +19,12 @@ In group activity recognition, the temporal dynamics of the whole activity can b
 
 We collected a new dataset using publicly available **YouTube volleyball** videos. We annotated **4830 frames** that were handpicked from **55 videos** with 9 player action labels and 8 team activity labels. 
 
-<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/dataset1.png" alt="Figure 1" height="400" >
+<img src="https://github.com/mostafa-saad/test-ignire/blob/master/img/dataset1.png" alt="Figure 1" height="400" >
 
 **Figure 3**: A frame labeled as Left Spike and bounding boxes around each team players is annotated in the dataset.
 
 
-<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/dataset2.png" alt="Figure 1" height="400" >
+<img src="https://github.com/mostafa-saad/test-ignire/blob/master/img/dataset2.png" alt="Figure 1" height="400" >
 
 **Figure 4**: For each visible player, an action label is annotaed.
 
