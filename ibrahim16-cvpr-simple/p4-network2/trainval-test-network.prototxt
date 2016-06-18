@@ -1,0 +1,168 @@
+name: "volleyball_level2"
+layer {
+  name: "clip_data"
+  type: "ImageData"
+  top: "dummy"
+  top: "clip"
+
+  image_data_param {
+    source: "examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/clip_w10.txt"
+    batch_size: 10
+  }
+}
+
+layer {
+  name: "Silence"
+  type: "Silence"
+  bottom: "dummy"
+}
+
+layer {
+  name: "volleyball_level2"
+  type: "Data"
+  top: "data"
+  top: "label"
+  include {
+    phase: TRAIN
+  }
+  data_param {
+    source: "examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/trainval-leveldb"
+    batch_size: 10
+    backend: LEVELDB
+  }
+}
+layer {
+  name: "volleyball_level2"
+  type: "Data"
+  top: "data"
+  top: "label"
+  include {
+    phase: TEST
+  }
+  data_param {
+    source: "examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/test-leveldb"
+    batch_size: 10
+    backend: LEVELDB
+  }
+}
+
+layer {
+  name: "fc1"
+  type: "InnerProduct"
+  bottom: "data"
+  top: "fc1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 3000
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu7"
+  type: "ReLU"
+  bottom: "fc1"
+  top: "fc1"
+}
+layer {
+  name: "drop7"
+  type: "Dropout"
+  bottom: "fc1"
+  top: "fc1"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+
+layer {
+  name: "lstm1"
+  type: "Lstm"
+  bottom: "fc1"
+  bottom: "clip"
+  top: "lstm1"
+
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+
+  lstm_param {
+    num_output: 1000
+    clipping_threshold: 0.1
+    weight_filler {
+      type: "gaussian"
+      std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "fc_last"
+  type: "InnerProduct"
+  bottom: "lstm1"
+  top: "fc_last"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 8
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "fc_last"
+  bottom: "label"
+}
+
+layer {
+  name: "accuracy"
+  type: "Accuracy"
+  bottom: "fc_last"
+  bottom: "label"
+  top: "accuracy"
+  include {
+    phase: TEST
+  }
+}
+
+
+
+
+
+

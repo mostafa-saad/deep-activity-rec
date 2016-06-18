@@ -1,0 +1,22 @@
+net: "examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/trainval-test-network.prototxt"
+
+# testing examples are 13370 = 1337 * 10.
+test_iter: 2
+test_interval: 2
+display: 2
+
+base_lr: 0.0001
+lr_policy: "step"
+gamma: 0.1
+stepsize: 2
+max_iter: 2
+momentum: 0.9
+weight_decay: 0.0005
+
+random_seed: 750301
+solver_mode: GPU
+
+snapshot: 2
+snapshot_prefix: "examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/z_snapshot"
+snapshot_after_train: true
+

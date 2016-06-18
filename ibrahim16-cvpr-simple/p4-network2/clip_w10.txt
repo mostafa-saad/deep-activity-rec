@@ -1,0 +1,10 @@
+examples/deep-activity-rec/ibrahim16-cvpr-simple/none.jpg 0
+examples/deep-activity-rec/ibrahim16-cvpr-simple/none.jpg 1
+examples/deep-activity-rec/ibrahim16-cvpr-simple/none.jpg 1
+examples/deep-activity-rec/ibrahim16-cvpr-simple/none.jpg 1
+examples/deep-activity-rec/ibrahim16-cvpr-simple/none.jpg 1
+examples/deep-activity-rec/ibrahim16-cvpr-simple/none.jpg 1
+examples/deep-activity-rec/ibrahim16-cvpr-simple/none.jpg 1
+examples/deep-activity-rec/ibrahim16-cvpr-simple/none.jpg 1
+examples/deep-activity-rec/ibrahim16-cvpr-simple/none.jpg 1
+examples/deep-activity-rec/ibrahim16-cvpr-simple/none.jpg 1

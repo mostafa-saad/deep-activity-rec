@@ -1,0 +1,154 @@
+name: "volleyball_level2"
+
+layer {
+  name: "volleyball_data"
+  type: "Data"
+  top: "data"
+  top: "label"
+  include {
+    phase: TEST
+  }
+  data_param {
+    source: "examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/test-leveldb"
+    batch_size: 10
+    backend: LEVELDB
+  }
+}
+
+layer {
+  name: "fc1"
+  type: "InnerProduct"
+  bottom: "data"
+  top: "fc1"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 3000
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "relu7"
+  type: "ReLU"
+  bottom: "fc1"
+  top: "fc1"
+}
+layer {
+  name: "drop7"
+  type: "Dropout"
+  bottom: "fc1"
+  top: "fc1"
+  dropout_param {
+    dropout_ratio: 0.5
+  }
+}
+
+layer {
+  name: "lstm1"
+  type: "Lstm"
+  bottom: "fc1"
+  top: "lstm1"
+
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+
+  lstm_param {
+    num_output: 1000
+    clipping_threshold: 0.1
+    weight_filler {
+      type: "gaussian"
+      std: 0.1
+    }
+    bias_filler {
+      type: "constant"
+    }
+  }
+}
+
+layer {
+  name: "fc_last"
+  type: "InnerProduct"
+  bottom: "lstm1"
+  top: "fc_last"
+  param {
+    lr_mult: 1
+    decay_mult: 1
+  }
+  param {
+    lr_mult: 2
+    decay_mult: 0
+  }
+  inner_product_param {
+    num_output: 8
+    weight_filler {
+      type: "gaussian"
+      std: 0.01
+    }
+    bias_filler {
+      type: "constant"
+      value: 0
+    }
+  }
+}
+
+layer {
+  name: "loss"
+  type: "SoftmaxWithLoss"
+  bottom: "fc_last"
+  bottom: "label"
+}
+
+layer {
+  name: "accuracy"
+  type: "Accuracy"
+  bottom: "fc_last"
+  bottom: "label"
+  top: "accuracy"
+  include {
+    phase: TEST
+  }
+}
+
+
+
+
+
+
+
+layer {
+  name: "prop"
+  type: "Softmax"
+  bottom: "fc_last"
+  top: "prop"
+}
+
+layer {
+  name: "argmax"
+  type: "ArgMax"
+  argmax_param {
+    out_max_val: false
+    top_k: 1
+  }
+  bottom: "prop"
+  top: "argmax"
+}

@@ -1,5 +1,14 @@
 ## [A Hierarchical Deep Temporal Model for Group Activity Recognition. Mostafa S. Ibrahim, Srikanth Muralidharan, Zhiwei Deng, Arash Vahdat, Greg Mori.  IEEE Computer Vision and Pattern Recognition 2016](http://www.cs.sfu.ca/~mori/research/papers/ibrahim-cvpr16.pdf)
 
+## History
+* The first version of this work is accepted at CVPR 2016.
+* An extended work is submitted to TPAMI (under review). [Jounral Paper Link](TODO).
+* This journal version builds on the previous version to include the following:
+  * We have collected an expanded Volleyball dataset that is 3 times larger than CVPR submission.
+  * We conducted further analysis of experimental results and included comparisons to an additional set of baseline methods.
+  * We implemented a variant of our approach to perform spatial pooling strategies over people.
+* The provided dataset is the expanded version. Please use and compare againt this version.
+
 ## Abstract
 In group activity recognition, the temporal dynamics of the whole activity can be inferred based on the dynamics of the individual people representing the activity. We build a deep model to capture these dynamics based on LSTM models. To make use of these observations, we present a **2-stage deep temporal model for the group activity recognition** problem.  In our model, a LSTM model is designed to represent **action dynamics of individual people** in a sequence and another LSTM model is designed to **aggregate person-level information** for whole activity understanding.  We evaluate our model over two datasets: the Collective Activity Dataset and a new volleyball dataset.
 
@@ -8,12 +17,16 @@ In group activity recognition, the temporal dynamics of the whole activity can b
 
 **Figure 1**: High level figure for group activity recognition via a hierarchical model. Each person in a scene is modeled using a temporal model that captures his/her dynamics, these models are integrated into a higher-level model that captures scene-level activity.
 
-<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/fig2.png" alt="Figure 1" height="400" >
+<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/fig2-b.png" alt="Figure 2" height="400" >
 
 **Figure 2**: Detailed figure for the model. Given tracklets of K-players, we feed each tracklet in a CNN, followed by a person LSTM layer to represent each player's action. We then pool over all people's temporal features in the scene. The output of the pooling layer is feed to the second LSTM network to identify the whole teams activity.
 
+<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/fig3.jpg" alt="Figure 3" height="400" >
+
+**Figure 3**: Previous basic mode drops spatial information. In updated model, 2-group pooling to capture spatial arrangements of players.
+
 ## Dataset
-### [Download Link](http://www.sfu.ca/~msibrahi/)
+### [Download Link](http://vml.cs.sfu.ca/wp-content/uploads/volleyballdataset/volleyball.zip)
 
 We collected a new dataset using publicly available **YouTube volleyball** videos. We annotated **4830 frames** that were handpicked from **55 videos** with 9 player action labels and 8 team activity labels. 
 
@@ -70,7 +83,46 @@ We used 3493 frames for training, and the remaining 1337 frames for testing. One
 * Each {Player Annotation} in format: {Action Class} X Y W H
 
 ## Installation
-TODO
+* There are 2 internal projects: a simple one for sake of validation and other one, the real pipeline.
+* Download and Install [Dlib library](http://dlib.net/).
+* Download and Install [Caffe-LSTM library](https://github.com/junhyukoh/caffe-lstm). 
+  * Assume your download disk path is $lstm_path
+* cd $lstm_path/examples
+* git clone https://github.com/mostafa-saad/deep-activity-rec.git
+* Open makefile at examples/deep-activity-rec
+  * Update path locations of variables CAFFE_LSTM_DIR and DLIB_DIR
+  * Update the INCS_DIRS and LIBS_DIRS (based on your environment)
+* Open examples/deep-activity-rec/ibrahim16-cvpr-simple/script-simple.sh
+  * Update path variable for CAFFE
+* cd examples/deep-activity-rec
+* Compile code: make all
+* cd ../..
+* Run: examples/deep-activity-rec/ibrahim16-cvpr-simple/script-simple.sh
+ * Make sure top concole lines don't complaint about "NOT exist directory".
+ * You may validate overall console processing with file script-simple-expected-log.txt
+ * If so, fix it, use script-clean.sh, run script-simple.sh.
+* The code process is multiple staged outlined in a script file.
+  * Processng should end with simple accuracy table, all of it almost zeros. 
+  * The key point, see the console log and make sure no problems. 
+  * Otherwise, read the script and try to get the different phases and read logs to get the errors.
+  * Every sub-directory under ibrahim16-cvpr-simple has 1 or more logs.
+  * Directory p4-network2 should have the final model and accuracy table.
+* If everything is ok, we can proceed with actual pipeline.
+* Download dataset to path deep-activity-rec/volleyball
+ * Same directory structure as given deep-activity-rec/volleyball-simple
+* Whatever steps/changes you did for ibrahim16-cvpr-simple, do it for ibrahim16-cvpr.
+* Run: examples/deep-activity-rec/ibrahim16-cvpr/script.sh
+* GPU/CPU note
+  * The script.sh has 2 heavy processing phases that needs CPU not GPU
+  * One can instead run following 2 scripts in parallel on CPU: script-p1-data.sh and script-p2-data-fuse.sh
+  * Then Run on GPU following script: script-p1-train-p3-p4.sh
+  * The overall of these 3 scripts = main script
+
+## Experiments
+
+<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/table-ac.png" alt="Figure 5" height="300" >
+
+**Table 1**: Comparison of the team activity recognition performance of baselines against our model evaluated on the Volleyball Dataset. Experiments are using 2 group styles with max pool strategy. Last 3 entries comparison against Improved Dense Trajectories approach.
 
 ## License and Citation
 
@@ -85,87 +137,11 @@ Please cite our model in your publications if it helps your research:
       year      = {2016}
     }
 
+    @inproceedings{msibrahi16deepactivity,
+      author    = {Mostafa S. Ibrahim and Srikanth Muralidharan and Zhiwei Deng and Arash Vahdat and Greg Mori},
+      title     = {Hierarchical Deep Temporal Models for Group Activity Recognition.},
+      booktitle = {TODO},
+      year      = {2016}
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!---
-
----
-layout: page
-title: A title...oh
-order: 7
----
-
-
-Commented!
-
-
-
-[![Build Status](https://travis-ci.org/BVLC/caffe.svg?branch=master)](https://travis-ci.org/BVLC/caffe)
-[![License](https://img.shields.io/badge/license-BSD-blue.svg)](LICENSE)
-
-
-
-## header 1
-
-### like header 2
-
-<table>
-   <tr>
-  	<td class="col-thirty"><strong>Code</strong></td>
-  	<td>data1</td>
-  </tr>
-   <tr>
-  	<td class="col-thirty"><strong>Format</strong></td>
-  	<td> data 2</td>
-  </tr>
-</table>
-
-Another table
-
-|| **Bold** |
-|---|---|
-|**Embedding Status Images**         |[![Build Status](https://ci.swift.org/job/oss-swift-incremental-RA-osx/badge/icon)](https://docs.travis-ci.com/user/status-images/)|
-
-##### Hmmm
-**See Here Tabed**
-
-    git clone https://github.com/test-test
-    git checkout release
-
-
-**[Some URL](http://brew.sh/)**
-
-
-For C++ developers:
-```c++
-int main()
-{
-    return 0;
-}
-```
-
-[![](https://img.shields.io/github/tag/alexhultman/uWebSockets.svg)]()
-
--->
 

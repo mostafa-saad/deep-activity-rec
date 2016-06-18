@@ -1,0 +1,370 @@
+mostafa@mostafa:~/workspaces/git/caffe-lstm$ examples/deep-activity-rec/ibrahim16-cvpr-simple/script-simple.sh
+------------------------------------------------------
+
+START processing script examples/deep-activity-rec/ibrahim16-cvpr-simple/script-simple.sh
+OUTPUT Directory is  /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple
+
+Doing path VALIDATIONS
+READY...STEADY...Gooo ?
+
+------------------------------------------------------
+Phase 1 - Generating Network 1 Data - /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1
+Start: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/exePhase1_2
+LSTM 1 preparation
+Loading the dataset...
+Preparing Dataset: train
+	from config file: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/dataset-config-simple/train.txt
+
+
+************************
+
+Preparing Dataset: val
+	from config file: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/dataset-config-simple/val.txt
+
+
+************************
+
+Preparing Dataset: test
+	from config file: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/dataset-config-simple/test.txt
+41 is processed
+
+
+************************
+
+Preparing Dataset: trainval
+	from config file: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/dataset-config-simple/trainval.txt
+39 is processed
+
+
+************************
+
+train dataset is EMPTY
+val dataset is EMPTY
+Total frames for dataset test = 2
+Total frames for dataset trainval = 2
+
+Total videos = 2 - total frames = 4
+
+Scenes Labels:
+	l-pass 0
+	r_spike 1
+
+Persons Labels:
+	blocking 5
+	digging 1
+	falling 7
+	moving 2
+	setting 3
+	spiking 6
+	standing 0
+	waiting 4
+
+Scenes Labels frequency:
+	l-pass 2
+	r_spike 2
+
+Players Labels frequency:
+	blocking 1
+	digging 2
+	falling 2
+	moving 5
+	setting 1
+	spiking 1
+	standing 33
+	waiting 3
+Temporal window = 5 with step = 1
+
+Creating a new dataset
+
+
+Creates a database at: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1/test-leveldb/
+	(H, W, C) = 256 256 3
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0612 16:35:57.784998 14753 leveldb-writer.cpp:52] Opening leveldb /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1/test-leveldb/
+Creating a new dataset
+
+
+Creates a database at: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1/trainval-leveldb/
+	(H, W, C) = 256 256 3
+I0612 16:35:57.907624 14753 leveldb-writer.cpp:52] Opening leveldb /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1/trainval-leveldb/
+Extracting shuffled elements from test Data Set. Total videos = 1
+Total images for current data set is 2. Overall entries will be <= 120
+E0612 16:36:01.151640 14753 leveldb-writer.cpp:223] /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1/test-leveldb/: Processed 120 files.
+
+Labels Statistics for db /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1/test-leveldb/
+Total Records 120
+*********************************************************
+Key = 0	 => Value 100 instances
+Key = 1	 => Value 5 instances
+Key = 2	 => Value 10 instances
+Key = 3	 => Value 5 instances
+*********************************************************
+Key = 0	 => Value 83.3 %
+Key = 1	 => Value 4.2 %
+Key = 2	 => Value 8.3 %
+Key = 3	 => Value 4.2 %
+Extracting shuffled elements from trainval Data Set. Total videos = 1
+Total images for current data set is 2. Overall entries will be <= 120
+E0612 16:36:04.130539 14753 leveldb-writer.cpp:223] /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1/trainval-leveldb/: Processed 120 files.
+
+Labels Statistics for db /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1/trainval-leveldb/
+Total Records 120
+*********************************************************
+Key = 0	 => Value 65 instances
+Key = 1	 => Value 5 instances
+Key = 2	 => Value 15 instances
+Key = 4	 => Value 15 instances
+Key = 5	 => Value 5 instances
+Key = 6	 => Value 5 instances
+Key = 7	 => Value 10 instances
+*********************************************************
+Key = 0	 => Value 54.2 %
+Key = 1	 => Value 4.2 %
+Key = 2	 => Value 12.5 %
+Key = 4	 => Value 12.5 %
+Key = 5	 => Value 4.2 %
+Key = 6	 => Value 4.2 %
+Key = 7	 => Value 8.3 %
+
+
+Bye: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/exePhase1_2
+========================
+Phase 1 - B - Computing Mean of Network 1 Training Data - /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1
+Computing image mean for trainval dataset:  examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1
+Done.
+========================
+Phase 1 - C - Network 1 Training
+Running Caffe using GPU In Directory  examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1
+------------------------------------------------------
+Phase 2 - A - Generating Data to be Fused - /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p2-ready-fuse
+Start: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/exePhase1_2
+Data Fusion for LSTM 2
+Loading the dataset...
+Preparing Dataset: train
+	from config file: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/dataset-config-simple/train.txt
+
+
+************************
+
+Preparing Dataset: val
+	from config file: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/dataset-config-simple/val.txt
+
+
+************************
+
+Preparing Dataset: test
+	from config file: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/dataset-config-simple/test.txt
+41 is processed
+
+
+************************
+
+Preparing Dataset: trainval
+	from config file: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/dataset-config-simple/trainval.txt
+39 is processed
+
+
+************************
+
+train dataset is EMPTY
+val dataset is EMPTY
+Total frames for dataset test = 2
+Total frames for dataset trainval = 2
+
+Total videos = 2 - total frames = 4
+
+Scenes Labels:
+	l-pass 0
+	r_spike 1
+
+Persons Labels:
+	blocking 5
+	digging 1
+	falling 7
+	moving 2
+	setting 3
+	spiking 6
+	standing 0
+	waiting 4
+
+Scenes Labels frequency:
+	l-pass 2
+	r_spike 2
+
+Players Labels frequency:
+	blocking 1
+	digging 2
+	falling 2
+	moving 5
+	setting 1
+	spiking 1
+	standing 33
+	waiting 3
+Temporal window = 10 with step = 1
+
+Creating a new dataset
+
+
+Creates a database at: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p2-ready-fuse/test-leveldb/
+	(H, W, C) = 256 256 3
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0612 16:38:30.898288 14832 leveldb-writer.cpp:52] Opening leveldb /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p2-ready-fuse/test-leveldb/
+Creating a new dataset
+
+
+Creates a database at: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p2-ready-fuse/trainval-leveldb/
+	(H, W, C) = 256 256 3
+I0612 16:38:31.156790 14832 leveldb-writer.cpp:52] Opening leveldb /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p2-ready-fuse/trainval-leveldb/
+Extracting shuffled elements from test Data Set. Total videos = 1
+Total images for current data set is 2. Overall entries will be = 240
+E0612 16:38:38.010151 14832 leveldb-writer.cpp:223] /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p2-ready-fuse/test-leveldb/: Processed 240 files.
+
+Labels Statistics for db /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p2-ready-fuse/test-leveldb/
+Total Records 240
+*********************************************************
+Key = 0	 => Value 120 instances
+Key = 1	 => Value 120 instances
+*********************************************************
+Key = 0	 => Value 50.0 %
+Key = 1	 => Value 50.0 %
+Extracting shuffled elements from trainval Data Set. Total videos = 1
+Total images for current data set is 2. Overall entries will be = 240
+E0612 16:38:44.260620 14832 leveldb-writer.cpp:223] /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p2-ready-fuse/trainval-leveldb/: Processed 240 files.
+
+Labels Statistics for db /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p2-ready-fuse/trainval-leveldb/
+Total Records 240
+*********************************************************
+Key = 0	 => Value 120 instances
+Key = 1	 => Value 120 instances
+*********************************************************
+Key = 0	 => Value 50.0 %
+Key = 1	 => Value 50.0 %
+
+
+Bye: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/exePhase1_2
+========================
+Phase 2 - B - Creating Mean File of Fused Data
+Computing image mean for dataset:  trainval
+------------------------------------------------------
+Phase 3 - Generarting LSTM 2 Data - /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2
+E0612 16:38:56.145875 14855 exePhase3.cpp:346] Make sure to have LD_LIBRARY_PATH pointing to LSTM implementation in case of LSTM
+
+E0612 16:38:56.303081 14855 exePhase3.cpp:166] Fusing style = max_pool_players_2
+
+E0612 16:38:56.303119 14855 exePhase3.cpp:169] frames_window = 10
+E0612 16:38:56.303136 14855 exePhase3.cpp:171] Expected batch size = 120
+E0612 16:38:56.303158 14855 exePhase3.cpp:184] Using CPU
+E0612 16:38:56.303218 14855 exePhase3.cpp:191] Model: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1/z_snapshot_iter_1.caffemodel
+E0612 16:38:56.303242 14855 exePhase3.cpp:192] Proto: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p3-extract-features-networks/trainval.prototxt
+E0612 16:38:56.303267 14855 exePhase3.cpp:194] Creating the test network
+E0612 16:39:02.240625 14855 exePhase3.cpp:197] Loading the Model
+[libprotobuf WARNING google/protobuf/io/coded_stream.cc:505] Reading dangerously large protocol message.  If the message turns out to be larger than 2147483647 bytes, parsing will be halted for security reasons.  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+[libprotobuf WARNING google/protobuf/io/coded_stream.cc:78] The total number of bytes read was 568239168
+E0612 16:39:17.920809 14855 exePhase3.cpp:206] # of blobs is 2
+E0612 16:39:17.920907 14855 exePhase3.cpp:212] blob_name: fc7
+E0612 16:39:18.012258 14855 exePhase3.cpp:212] blob_name: lstm1
+E0612 16:39:18.012333 14855 exePhase3.cpp:223] num_mini_batches: 2
+
+
+Creates a database at: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/trainval-leveldb
+E0612 16:39:43.161676 14855 exePhase3.cpp:278] 
+
+E0612 16:39:43.161788 14855 exePhase3.cpp:285] ith Vector Length = 4096
+E0612 16:39:43.161806 14855 exePhase3.cpp:285] ith Vector Length = 3000
+E0612 16:39:43.165956 14855 exePhase3.cpp:311] Fused Vector Length = 14192
+E0612 16:40:10.215795 14855 leveldb-writer.cpp:223] /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/trainval-leveldb: Processed 20 files.
+
+Labels Statistics for db /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/trainval-leveldb
+Total Records 20
+*********************************************************
+Key = 0	 => Value 10 instances
+Key = 1	 => Value 10 instances
+*********************************************************
+Key = 0	 => Value 50.0 %
+Key = 1	 => Value 50.0 %
+E0612 16:40:10.326062 14855 exePhase3.cpp:356] 
+
+Successfully extracted the features!
+
+E0612 16:40:10.326143 14855 exePhase3.cpp:166] Fusing style = max_pool_players_2
+
+E0612 16:40:10.326162 14855 exePhase3.cpp:169] frames_window = 10
+E0612 16:40:10.326179 14855 exePhase3.cpp:171] Expected batch size = 120
+E0612 16:40:10.326197 14855 exePhase3.cpp:184] Using CPU
+E0612 16:40:10.326225 14855 exePhase3.cpp:191] Model: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p1-network1/z_snapshot_iter_1.caffemodel
+E0612 16:40:10.326256 14855 exePhase3.cpp:192] Proto: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p3-extract-features-networks/test.prototxt
+E0612 16:40:10.326279 14855 exePhase3.cpp:194] Creating the test network
+E0612 16:40:18.722841 14855 exePhase3.cpp:197] Loading the Model
+[libprotobuf WARNING google/protobuf/io/coded_stream.cc:505] Reading dangerously large protocol message.  If the message turns out to be larger than 2147483647 bytes, parsing will be halted for security reasons.  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+[libprotobuf WARNING google/protobuf/io/coded_stream.cc:78] The total number of bytes read was 568239168
+E0612 16:40:22.197417 14855 exePhase3.cpp:206] # of blobs is 2
+E0612 16:40:22.197490 14855 exePhase3.cpp:212] blob_name: fc7
+E0612 16:40:22.197540 14855 exePhase3.cpp:212] blob_name: lstm1
+E0612 16:40:22.197576 14855 exePhase3.cpp:223] num_mini_batches: 2
+
+
+Creates a database at: /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/test-leveldb
+E0612 16:41:19.411211 14855 leveldb-writer.cpp:223] /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/test-leveldb: Processed 20 files.
+
+Labels Statistics for db /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/test-leveldb
+Total Records 20
+*********************************************************
+Key = 0	 => Value 10 instances
+Key = 1	 => Value 10 instances
+*********************************************************
+Key = 0	 => Value 50.0 %
+Key = 1	 => Value 50.0 %
+E0612 16:41:19.490344 14855 exePhase3.cpp:356] 
+
+Successfully extracted the features!
+
+------------------------------------------------------
+Phase 4 - A - LSTM 2 Training - /home/mostafa/workspaces/git/caffe-lstm/examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2
+Running Caffe using GPU In Directory  examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2
+========================
+Phase 4 - B - Temporal Evaluation
+E0612 16:41:46.152066 15089 exePhase4.cpp:252] Make sure to have LD_LIBRARY_PATH pointing to LSTM implementation in case of LSTM
+
+E0612 16:41:46.169050 15089 exePhase4.cpp:146] Temporal Window = 10
+E0612 16:41:46.169098 15089 exePhase4.cpp:159] Using CPU
+E0612 16:41:46.169178 15089 exePhase4.cpp:166] Model: examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/z_snapshot_iter_2.caffemodel
+E0612 16:41:46.169193 15089 exePhase4.cpp:167] Proto: examples/deep-activity-rec/ibrahim16-cvpr-simple/p4-network2/trainval-test-window-evaluation-network.prototxt
+E0612 16:41:46.169231 15089 exePhase4.cpp:169] Creating the test network
+E0612 16:41:48.182070 15089 exePhase4.cpp:172] Loading the Model
+E0612 16:41:48.637673 15089 exePhase4.cpp:176] blob_name: prop
+E0612 16:41:48.637748 15089 exePhase4.cpp:181] num_mini_batches: 7
+
+
+Test 1: Result = 0 GroundTruth = 0
+Test 2: Result = 7 GroundTruth = 1
+Test 3: Result = 0 GroundTruth = 0
+Test 4: Result = 7 GroundTruth = 1
+Test 5: Result = 0 GroundTruth = 0
+Test 6: Result = 7 GroundTruth = 1
+Test 7: Result = 0 GroundTruth = 0
+
+
+Total testing frames: 7 with temporal window: 1
+Temporal accuracy : 57.14 %
+
+=======================================================================================
+
+Confusion Matrix - Truth (col) / Result(row)
+
+  T/R:     0    1    7
+=======================================================================================
+    0:     4    0    0 	=> Total Correct =     4 /     4 = 100.00 %
+    1:     0    0    3 	=> Total Correct =     0 /     3 = 0.00 %
+    7:     0    0    0 	=> Total Correct =     0 /     0 = 0.00 %
+
+
+    T/R:       0      1      7
+=======================================================================================
+      0:  100.00   0.00   0.00
+      1:    0.00   0.00 100.00
+      7:    0.00   0.00   0.00
+
+To get labels corresponding to IDs..see dataset loading logs
+------------------------------------------------------
+
+DONE processing script examples/deep-activity-rec/ibrahim16-cvpr-simple/script-simple.sh
