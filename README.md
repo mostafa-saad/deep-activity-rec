@@ -2,7 +2,7 @@
 
 ## History
 * The first version of this work is accepted at CVPR 2016.
-* An extended work is submitted to TPAMI (under review). [Jounral Paper Link](https://github.com/mostafa-saad/test-ignire-temp/blob/master/local_group_activity_deep_temporal_model.pdf).
+* An extended work is submitted to TPAMI (under review). [Jounral Paper Link](https://github.com/mostafa-saad/test-ignire-temp/raw/master/local_group_activity_deep_temporal_model.pdf).
 * This journal version builds on the previous version to include the following:
   * We have collected an expanded Volleyball dataset that is 3 times larger than CVPR submission.
   * We conducted further analysis of experimental results and included comparisons to an additional set of baseline methods.
