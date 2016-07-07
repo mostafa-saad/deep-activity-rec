@@ -144,4 +144,11 @@ Please cite our model in your publications if it helps your research:
       year      = {2016}
     }
 
+## CVPR 16 Poster
+* You can find our CVPR 2016 poster [here](https://github.com/mostafa-saad/deep-activity-rec/blob/master/extra/poster.pdf).
+
+<img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/extra/poster.jpg" alt="Poster" height="400" >
+
+Mostafa on left and Srikanth on right while presenting the poster.
+
 
