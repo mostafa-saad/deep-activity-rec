@@ -2,7 +2,7 @@
 
 ## History
 * The first version of this work is accepted at CVPR 2016.
-* An extended work is submitted to TPAMI (under review). [Jounral Paper Link](https://github.com/mostafa-saad/test-ignire-temp/raw/master/local_group_activity_deep_temporal_model.pdf).
+* An extended work is submitted to TPAMI (under review). [Jounral Paper Link](http://arxiv.org/pdf/1607.02643v1.pdf).
 * This journal version builds on the previous version to include the following:
   * We have collected an expanded Volleyball dataset that is 3 times larger than CVPR submission.
   * We conducted further analysis of experimental results and included comparisons to an additional set of baseline methods.
@@ -140,7 +140,7 @@ Please cite our model in your publications if it helps your research:
     @inproceedings{msibrahi16deepactivity,
       author    = {Mostafa S. Ibrahim and Srikanth Muralidharan and Zhiwei Deng and Arash Vahdat and Greg Mori},
       title     = {Hierarchical Deep Temporal Models for Group Activity Recognition.},
-      booktitle = {TODO},
+      journal   = {arXiv preprint arXiv:1607.02643},
       year      = {2016}
     }
 
