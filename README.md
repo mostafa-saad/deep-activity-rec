@@ -144,7 +144,8 @@ Please cite our model in your publications if it helps your research:
       year      = {2016}
     }
 
-## CVPR 16 Poster
+## CVPR 16 Poster & Powerpoint
+* You can find a presentation for the paper [here](https://docs.google.com/presentation/d/1iHMRCghn-dOYc2knvTj8Kp27RRojCsLzCbE8Ax5JCOs/edit?usp=sharing).
 * You can find our CVPR 2016 poster [here](https://github.com/mostafa-saad/deep-activity-rec/blob/master/extra/poster.pdf).
 
 <img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/extra/poster.jpg" alt="Poster" height="400" >
