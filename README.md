@@ -101,18 +101,18 @@ We used 3493 frames for training, and the remaining 1337 frames for testing. The
 * There are 2 internal projects: a simple one for sake of validation and other one, the real pipeline.
 * Download and Install [Dlib library](http://dlib.net/).
 * Download and Install [Caffe-LSTM library](https://github.com/junhyukoh/caffe-lstm). 
-  * Assume your download disk path is $lstm_path
-* cd $lstm_path/examples
-* git clone https://github.com/mostafa-saad/deep-activity-rec.git
+  * Assume your download disk path is `$lstm_path`
+* `cd $lstm_path/examples`
+* `git clone https://github.com/mostafa-saad/deep-activity-rec.git`
 * Open makefile at examples/deep-activity-rec
-  * Update path locations of variables CAFFE_LSTM_DIR and DLIB_DIR
-  * Update the INCS_DIRS and LIBS_DIRS (based on your environment)
+  * `Update` path locations of variables CAFFE_LSTM_DIR and DLIB_DIR
+  * `Update` the INCS_DIRS and LIBS_DIRS (based on your environment)
 * Open examples/deep-activity-rec/ibrahim16-cvpr-simple/script-simple.sh
   * Update path variable for CAFFE
-* cd examples/deep-activity-rec
-* Compile code: make all
-* cd ../..
-* Run: examples/deep-activity-rec/ibrahim16-cvpr-simple/script-simple.sh
+* `cd examples/deep-activity-rec`
+* Compile code: `make all`
+* `cd ../..`
+* Run: `examples/deep-activity-rec/ibrahim16-cvpr-simple/script-simple.sh`
  * Make sure top console lines don't complain about "NOT exist directory".
  * You may validate overall console processing with file script-simple-expected-log.txt
  * If so, fix it, use script-clean.sh, run script-simple.sh.
@@ -126,7 +126,7 @@ We used 3493 frames for training, and the remaining 1337 frames for testing. The
 * Download the dataset to path deep-activity-rec/volleyball
  * Same directory structure as given deep-activity-rec/volleyball-simple
 * Whatever steps/changes you did for ibrahim16-cvpr-simple, do it for ibrahim16-cvpr.
-* Run: examples/deep-activity-rec/ibrahim16-cvpr/script.sh
+* Run: `examples/deep-activity-rec/ibrahim16-cvpr/script.sh`
 * GPU/CPU note:
   * The script.sh has 2 heavy processing phases that needs CPU.
   * One can also run the following 2 scripts in parallel on CPU: script-p1-data.sh and script-p2-data-fuse.sh
