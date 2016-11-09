@@ -142,7 +142,7 @@ In case using our extended dataset, please site the following 2 publications. Ot
     @inproceedings{msibrahiCVPR16deepactivity,
       author    = {Mostafa S. Ibrahim and Srikanth Muralidharan and Zhiwei Deng and Arash Vahdat and Greg Mori},
       title     = {A Hierarchical Deep Temporal Model for Group Activity Recognition.},
-      booktitle = {Computer Vision and Pattern Recognition (CVPR)},
+      booktitle = {2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
       year      = {2016}
     }
 
