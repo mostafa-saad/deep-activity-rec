@@ -137,16 +137,16 @@ We used 3493 frames for training, and the remaining 1337 frames for testing. The
 
 Source code is released under the **BSD 2-Clause license**
 
-Please cite our model in your publications if it helps your research:
+In case using our extended dataset, please site the following 2 publications. Otherwise, cite a suitable subset of them:
 
-    @inproceedings{msibrahi16deepactivity,
+    @inproceedings{msibrahiCVPR16deepactivity,
       author    = {Mostafa S. Ibrahim and Srikanth Muralidharan and Zhiwei Deng and Arash Vahdat and Greg Mori},
       title     = {A Hierarchical Deep Temporal Model for Group Activity Recognition.},
       booktitle = {Computer Vision and Pattern Recognition (CVPR)},
       year      = {2016}
     }
 
-    @inproceedings{msibrahi16deepactivity,
+    @inproceedings{msibrahiPAMI16deepactivity,
       author    = {Mostafa S. Ibrahim and Srikanth Muralidharan and Zhiwei Deng and Arash Vahdat and Greg Mori},
       title     = {Hierarchical Deep Temporal Models for Group Activity Recognition.},
       journal   = {arXiv preprint arXiv:1607.02643},
