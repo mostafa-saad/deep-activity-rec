@@ -38,6 +38,8 @@ In group activity recognition, the temporal dynamics of the whole activity can b
 ## Dataset
 ### [Download Link](http://vml.cs.sfu.ca/wp-content/uploads/volleyballdataset/volleyball.zip)
 
+**UPDATE 1**: many people asked for extracted trajectories. In fact, as in our code, we generate them on the fly using Dlib Tracker. I extrated and saved them to disk (with some verifications). Hopefully this helps more. [Download](https://drive.google.com/file/d/0B_rSt5dGmwYBQkh2WFNKTjBSeWM/view?usp=sharing)
+
 We collected a new dataset using publicly available **YouTube volleyball** videos. We annotated **4830 frames** that were handpicked from **55 videos** with 9 player action labels and 8 team activity labels. 
 
 <img src="https://github.com/mostafa-saad/deep-activity-rec/blob/master/img/dataset1.jpg" alt="Figure 3" height="400" >
