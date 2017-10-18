@@ -12,8 +12,8 @@
 
 ## History
 * The first version of this work is accepted at CVPR 2016.
-* An extended work is submitted to TPAMI (under review). [Journal Paper Link](http://arxiv.org/pdf/1607.02643v1.pdf).
-* This journal version builds on the previous version to include the following:
+* An extended work is uploaded on arxiv. [Link](http://arxiv.org/pdf/1607.02643v1.pdf).
+* This version builds on the previous version to include the following:
   * We have collected an expanded Volleyball dataset that is 3 times larger than CVPR submission.
   * We conducted further analysis of experimental results and included comparisons to an additional set of baseline methods.
   * We implemented a variant of our approach to perform spatial pooling strategies over people.
