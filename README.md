@@ -42,6 +42,8 @@ In group activity recognition, the temporal dynamics of the whole activity can b
 
 **UPDATE 2**: My College, Jiawei (Eric) He, Recently trained 2 Faster-RCNN detectors using the training detections. One detector just detects the person. The other one detects the action of the person. Each row has format: [Image name # of detections x y w h confidence category (for each detection)]. Multiple scenarios such data can be useful and cut your time. I did few verifications over them. Notice, these data are not used in our models. They are provided to help :). [Download](https://drive.google.com/file/d/0B_rSt5dGmwYBQXVqLUNKd3FUdVE/view?usp=sharing).
 
+**UPDATE 3 - NEW**: Special thanks for Norimichi Ukita (a [professor](https://www.toyota-ti.ac.jp/Lab/Denshi/iim/ukita/) at Toyota Technological Institute) for providing manual annotations for the trajectories on all video sequences. [Download](https://drive.google.com/open?id=1M-fXmAVw8WyFr30xb-LMi_Z-Qiv2nFzl). Kindely checkout the README file for data format and cite their paper if used the annotations (Heatmapping of People Involved in Group Activities, Kohei Sendo and Norimichi Ukita, MVA 2019) 
+
 
 We collected a new dataset using publicly available **YouTube volleyball** videos. We annotated **4830 frames** that were handpicked from **55 videos** with 9 player action labels and 8 team activity labels. 
 
