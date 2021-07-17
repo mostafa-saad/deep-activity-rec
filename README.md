@@ -36,7 +36,13 @@ In group activity recognition, the temporal dynamics of the whole activity can b
 **Figure 3**: Previous basic mode drops spatial information. In updated model, 2-group pooling to capture spatial arrangements of players.
 
 ## Dataset
-### [Download Link](http://vml.cs.sfu.ca/wp-content/uploads/volleyballdataset/volleyball.zip). If link doesn't work at some point, please email me (mostafa.saad.fci@gmail.com)
+
+https://drive.google.com/drive/folders/1rmsrG1mgkwxOKhsr-QYoi9Ss92wQmCOS?usp=sharing
+
+### [NEW Download Link (all below combined google drive](https://drive.google.com/drive/folders/1rmsrG1mgkwxOKhsr-QYoi9Ss92wQmCOS?usp=sharing). 
+
+### [Old Download Link](http://vml.cs.sfu.ca/wp-content/uploads/volleyballdataset/volleyball.zip). 
+If links don't work at some point, please email me (mostafa.saad.fci@gmail.com)
 
 **UPDATE 1**: many people asked for extracted trajectories. In fact, as in our code, we generate them on the fly using Dlib Tracker. I extrated and saved them to disk (I did few verifications). Hopefully this helps more. [Download](https://drive.google.com/file/d/0B_rSt5dGmwYBQkh2WFNKTjBSeWM/view?usp=sharing).
 
