@@ -37,8 +37,6 @@ In group activity recognition, the temporal dynamics of the whole activity can b
 
 ## Dataset
 
-https://drive.google.com/drive/folders/1rmsrG1mgkwxOKhsr-QYoi9Ss92wQmCOS?usp=sharing
-
 ### [NEW Download Link (all below combined google drive](https://drive.google.com/drive/folders/1rmsrG1mgkwxOKhsr-QYoi9Ss92wQmCOS?usp=sharing). 
 
 ### [Old Download Link](http://vml.cs.sfu.ca/wp-content/uploads/volleyballdataset/volleyball.zip). 
