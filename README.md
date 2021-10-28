@@ -48,6 +48,8 @@ If links don't work at some point, please email me (mostafa.saad.fci@gmail.com)
 
 **UPDATE 3 - NEW**: Special thanks for Norimichi Ukita (a [professor](https://www.toyota-ti.ac.jp/Lab/Denshi/iim/ukita/) at Toyota Technological Institute) for providing manual annotations for the trajectories on all video sequences. [Download](https://drive.google.com/open?id=1M-fXmAVw8WyFr30xb-LMi_Z-Qiv2nFzl). Kindely checkout the README file for data format and cite their paper if used the annotations (Heatmapping of People Involved in Group Activities, Kohei Sendo and Norimichi Ukita, MVA 2019) 
 
+**UPDATE 4 - NEW**: Special thanks for Mauricio Perez. In their recent paper: [Skeleton-based relational reasoning for group activity analysis](https://www.sciencedirect.com/science/article/abs/pii/S0031320321005409) they manually annotated the ball locations in the frames. Kindely cite their paper if you used their [dataset extension](https://drive.google.com/file/d/1urZpZiiepC85JD1u3VeURgUpztRgI0yl/edit)
+
 
 We collected a new dataset using publicly available **YouTube volleyball** videos. We annotated **4830 frames** that were handpicked from **55 videos** with 9 player action labels and 8 team activity labels. 
 
